@@ -4,6 +4,7 @@
 beautifulsoup和xpath
 将搜索的多个字段内容保存到csv，并且将相关条目加到队列里面无限递归爬取
 但是最后会报内存溢出报错。不知道是不是没用队列和多线程的原因
+后面经过排查，原来是爬取是通过深度递归的方式，我获取的新的词汇会有一个小空格在里面，将带空格的词汇放进队列，然后去发送检索请求，就会出现以下报错。代码已经改进，词汇表足够丰富的情况下是可以全网爬的
 
 Traceback (most recent call last):
   File "C:\Users\JKXZ\AppData\Local\conda\conda\envs\ai\lib\site-packages\requests\packages\urllib3\response.py", line 302, in _error_catcher
