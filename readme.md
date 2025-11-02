@@ -1,4 +1,5 @@
 # http://www.tcmkb.cn 中医药知识服务平台搜索结果爬取
+-----
 技术栈：
 随机useragent
 beautifulsoup和xpath
